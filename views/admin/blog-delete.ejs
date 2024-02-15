@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <!--ORTAK NAVBAR KULLANIMI-->
+<%- include('../partials/nav') %>
+
+   <div class="container mt-3">
+    
+        <div class="row">
+            <div class="col-md-12 mt-3">
+             <div class="alert alert-secondary">
+                <p class="mb-3">
+                    <b><%= blog.baslik %> </b><br>İsimli Blog Kaydını Silmek İstiyor Musunuz ?
+                </p>
+                <form  method="post">
+                    <input type="hidden" name="blogid" value="<%= blog.blogid %>">
+                    <button type="submit" class="btn btn-danger">Evet</button>
+                    <a href="/admin/blogs" class="btn btn-primary">Vazgeç</a>
+                </form>
+             </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<div class="list-group">
+  <a href="/blogs" class="list-group-item list-group-item-action"> Tüm Kategoriler</a>
+    <% for( let i = 0; i < categories.length; i++ ) { %>
+      <a href="/blogs/category/<%=categories[i].categoryid%>" 
+        class="list-group-item list-group-item-action<%=selectedCategory==categories[i].categoryid ? ' active':''  %> "> 
+        <%=categories[i].name  %>
+     </a>
+
+   <% } %> 
+</div>

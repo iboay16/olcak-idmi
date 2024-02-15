@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <!--ORTAK NAVBAR KULLANIMI-->
+<%- include('../partials/nav') %>
+
+   <div class="container mt-3">
+       <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">id</th>
+                        <th style="width: 150px;">Ad</th>
+                        <th style="width: 130px;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                   <% categories.forEach(categories => { %>
+                    <tr>
+                        <td><%= categories.categoryid %></td>
+                        <td><%= categories.name %></td>
+                        <td>
+                            <a class="btn btn-sm btn-primary " href="/admin/categorys/<%= categories.categoryid %>"></a>edit
+                            <a class="btn btn-sm btn-danger " href="/admin/category/delete/<%= categories.categoryid %>"></a>delete
+                        </td>
+                    </tr>
+                   <% }) %>
+                </tbody>
+            </table>
+        </div>
+       </div>
+   </div>
+</body>
+</html>

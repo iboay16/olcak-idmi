@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sevgililer Günü Kutlu Olsun!</title>
+    <style>
+        body {
+    background-color: #ff6699;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    color: #fff;
+}
+
+.heart {
+    background: url('heart.png') no-repeat center center;
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    margin: 20px auto;
+    animation: heartBeat 1s infinite;
+}
+
+@keyframes heartBeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart"></div>
+        <h1>Sevgililer Günün Kutlu Olsun!</h1>
+        <p>CEYDAAA</p>
+    </div>
+</body>
+</html>

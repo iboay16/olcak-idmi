@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <!--ORTAK NAVBAR KULLANIMI-->
+<%- include('../partials/nav') %>
+
+   <div class="container mt-3">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="/static/images/<%=blog.resim  %>" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-9">
+                    <h1 class="h3 mb-3">
+                        <!--EJS İLE SAYFAYA DİNAMİK VERİ EKLEME-->
+                        <%=blog.baslik%>
+        
+                    </h1>
+                    <!--  == YAPMA - YAP  -->
+               <p><%=blog.altbaslik  %></p>
+               <hr>
+             
+                
+        
+        
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p><%-blog.aciklama  %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   </div>
+</body>
+</html>
